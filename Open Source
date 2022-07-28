@@ -1,0 +1,634 @@
+if game.PlaceId == 9711302332 then
+    local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
+    local Window = Library.CreateLib("Clicker Heroes", "BloodTheme")
+
+    local Main = Window:NewTab("Main")
+    local MainSection = Main:NewSection("Main")
+
+
+
+    MainSection:NewToggle("Auto Tap", "Taps???", function(v)
+        getgenv().autoswing = v
+        while true do
+            if not getgenv().autoswing then return end
+
+            local A_1 = "Tap Capacity"
+            local A_2 = "HandleTapActivation"
+            local A_3 = "Home"
+            local Event = game:GetService("ReplicatedStorage").Shared.Modules.Utilities.NetworkUtility.Events.UpdateGemUpgrades
+            Event:FireServer(A_1, A_2, A_3)
+            
+         
+
+           wait()
+
+        end
+    end)
+
+       MainSection:NewToggle("Auto Equip Best Pet", "DmD", function(v)
+        getgenv().autoswings = v
+        while true do
+            if not getgenv().autoswings then return end
+
+            local args = {
+                [1] = "EquipBestPets"
+            }
+            
+            game:GetService("ReplicatedStorage").Shared.Modules.Utilities.NetworkUtility.Events.UpdatePets:FireServer(unpack(args))
+            
+         
+
+           wait(5)
+
+        end
+    end)
+
+      MainSection:NewToggle("Auto Evolve", "Evolves", function(v)
+        getgenv().autoswingss = v
+        while true do
+            if not getgenv().autoswingss then return end
+
+            local args = {
+                [1] = "EvolveAllPets"
+            }
+            
+            game:GetService("ReplicatedStorage").Shared.Modules.Utilities.NetworkUtility.Events.UpdatePets:FireServer(unpack(args))
+            
+            
+           wait(0.7)
+
+        end
+    end)
+
+
+    local Rebirths; --CREATE GLOBAL VARIABLE OF THE USERS SELECTION TO BE USED ANYWHERE
+    MainSection:NewDropdown("Select Rebirth", "Click the number you want (Refers to how far down it is)", {"1 Rebirths", "5 Rebirths", "10 Rebirths", "25 Rebirths", "100 Rebirths", "1k Rebirths", "5k Rebirths", "10k Rebirths", "25K Rebirths", "50k Rebirths", "100k Rebirths", "500k Rebirths", "1m Rebirths", "5m Rebirths", "25m Rebirths", "100m Rebirths", "500m Rebirths", "2.5b Rebirths", "10b Rebirths", "25b Rebirths", "50b Rebirths", "125b Rebirths", "250b Rebirths", "500b Rebirths", "1t Rebirths", "2.5t Rebirths", "5t Rebirths", "10t Rebirths", "25t Rebirths", "50t Rebirths", "100t Rebirths", "250t Rebirths", "500t Rebirths", "750t Rebirths", "1qd Rebirths", "2qd Rebirths", "5qd Rebirths", "7.5qd Rebirths", "10qd Rebirths", "25qd Rebirths", "50qd Rebirths",}, function(value)--THIS FUNCTION ALLOWS US TO STORE THE USERS SELECTION
+        Rebirths = value; --STORES THE USERS SELECTION
+    end)
+
+
+    MainSection:NewToggle("Auto Rebirth", "Auto Rebirths Selected Rebirth", function(v)
+
+        getgenv().autoclicker = v
+        while true do
+            if not getgenv().autoclicker then return end
+
+
+            wait() 
+if Rebirths == "1 Rebirths" then
+    local args = {
+        [1] = "BuyRebirths",
+        [2] = 1
+    }
+    
+    game:GetService("ReplicatedStorage").Shared.Modules.Utilities.NetworkUtility.Events.UpdateRebirths:FireServer(unpack(args))
+    wait()  
+else if Rebirths == "5 Rebirths" then
+    local args = {
+        [1] = "BuyRebirths",
+        [2] = 2
+    }
+    
+    game:GetService("ReplicatedStorage").Shared.Modules.Utilities.NetworkUtility.Events.UpdateRebirths:FireServer(unpack(args))
+    wait()    
+else if Rebirths == "10 Rebirths" then
+    local args = {
+        [1] = "BuyRebirths",
+        [2] = 3
+    }
+    
+    game:GetService("ReplicatedStorage").Shared.Modules.Utilities.NetworkUtility.Events.UpdateRebirths:FireServer(unpack(args))
+    wait() 
+else if Rebirths == "25 Rebirths" then
+    local args = {
+        [1] = "BuyRebirths",
+        [2] = 4
+    }
+    
+    game:GetService("ReplicatedStorage").Shared.Modules.Utilities.NetworkUtility.Events.UpdateRebirths:FireServer(unpack(args))
+    wait()  
+else if Rebirths == "100 Rebirths" then
+    local args = {
+        [1] = "BuyRebirths",
+        [2] = 5
+    }
+    
+    game:GetService("ReplicatedStorage").Shared.Modules.Utilities.NetworkUtility.Events.UpdateRebirths:FireServer(unpack(args))
+    wait()  
+else if Rebirths == "1k Rebirths" then
+    local args = {
+        [1] = "BuyRebirths",
+        [2] = 6
+    }
+    
+    game:GetService("ReplicatedStorage").Shared.Modules.Utilities.NetworkUtility.Events.UpdateRebirths:FireServer(unpack(args))
+    wait() 
+else if Rebirths == "5k Rebirths" then
+    local args = {
+        [1] = "BuyRebirths",
+        [2] = 7
+    }
+    
+    game:GetService("ReplicatedStorage").Shared.Modules.Utilities.NetworkUtility.Events.UpdateRebirths:FireServer(unpack(args))
+    wait()  
+else if Rebirths == "10k Rebirths" then
+    local args = {
+        [1] = "BuyRebirths",
+        [2] = 8
+    }
+    
+    game:GetService("ReplicatedStorage").Shared.Modules.Utilities.NetworkUtility.Events.UpdateRebirths:FireServer(unpack(args))
+    wait() 
+else if Rebirths == "25k Rebirths" then
+    local args = {
+        [1] = "BuyRebirths",
+        [2] = 9
+    }
+    
+    game:GetService("ReplicatedStorage").Shared.Modules.Utilities.NetworkUtility.Events.UpdateRebirths:FireServer(unpack(args))
+    wait()   
+else if Rebirths == "50k Rebirths" then
+    local args = {
+        [1] = "BuyRebirths",
+        [2] = 10
+    }
+    
+    game:GetService("ReplicatedStorage").Shared.Modules.Utilities.NetworkUtility.Events.UpdateRebirths:FireServer(unpack(args))
+    wait() 
+else if Rebirths == "100k Rebirths" then
+    local args = {
+        [1] = "BuyRebirths",
+        [2] = 11
+    }
+    
+    game:GetService("ReplicatedStorage").Shared.Modules.Utilities.NetworkUtility.Events.UpdateRebirths:FireServer(unpack(args))
+    wait() 
+else if Rebirths == "500k Rebirths" then
+    local args = {
+        [1] = "BuyRebirths",
+        [2] = 12
+    }
+    
+    game:GetService("ReplicatedStorage").Shared.Modules.Utilities.NetworkUtility.Events.UpdateRebirths:FireServer(unpack(args))
+    wait()    
+else if Rebirths == "1m Rebirths" then
+    local args = {
+        [1] = "BuyRebirths",
+        [2] = 13
+    }
+    
+    game:GetService("ReplicatedStorage").Shared.Modules.Utilities.NetworkUtility.Events.UpdateRebirths:FireServer(unpack(args))
+    wait()   
+else if Rebirths == "5m Rebirths" then
+    local args = {
+        [1] = "BuyRebirths",
+        [2] = 14
+    }
+    
+    game:GetService("ReplicatedStorage").Shared.Modules.Utilities.NetworkUtility.Events.UpdateRebirths:FireServer(unpack(args))
+    wait() 
+else if Rebirths == "25m Rebirths" then
+    local args = {
+        [1] = "BuyRebirths",
+        [2] = 15
+    }
+    
+    game:GetService("ReplicatedStorage").Shared.Modules.Utilities.NetworkUtility.Events.UpdateRebirths:FireServer(unpack(args))
+wait() 
+else if Rebirths == "100m Rebirths" then
+    local args = {
+        [1] = "BuyRebirths",
+        [2] = 16
+    }
+    
+    game:GetService("ReplicatedStorage").Shared.Modules.Utilities.NetworkUtility.Events.UpdateRebirths:FireServer(unpack(args))
+    wait() 
+else if Rebirths == "500m Rebirths" then
+    local args = {
+        [1] = "BuyRebirths",
+        [2] = 17
+    }
+    
+    game:GetService("ReplicatedStorage").Shared.Modules.Utilities.NetworkUtility.Events.UpdateRebirths:FireServer(unpack(args))
+    wait() 
+else if Rebirths == "2.5b Rebirths" then
+    local args = {
+        [1] = "BuyRebirths",
+        [2] = 18
+    }
+    
+    game:GetService("ReplicatedStorage").Shared.Modules.Utilities.NetworkUtility.Events.UpdateRebirths:FireServer(unpack(args))
+wait()  
+else if Rebirths == "10b Rebirths" then
+    local args = {
+        [1] = "BuyRebirths",
+        [2] = 19
+    }
+    
+    game:GetService("ReplicatedStorage").Shared.Modules.Utilities.NetworkUtility.Events.UpdateRebirths:FireServer(unpack(args))
+    wait()    
+else if Rebirths == "25b Rebirths" then
+    local args = {
+        [1] = "BuyRebirths",
+        [2] = 20
+    }
+    
+    game:GetService("ReplicatedStorage").Shared.Modules.Utilities.NetworkUtility.Events.UpdateRebirths:FireServer(unpack(args))
+    wait() 
+else if Rebirths == "50b Rebirths" then
+    local args = {
+        [1] = "BuyRebirths",
+        [2] = 21
+    }
+    
+    game:GetService("ReplicatedStorage").Shared.Modules.Utilities.NetworkUtility.Events.UpdateRebirths:FireServer(unpack(args))
+    wait()  
+else if Rebirths == "125b Rebirths" then
+    local args = {
+        [1] = "BuyRebirths",
+        [2] = 22
+    }
+    
+    game:GetService("ReplicatedStorage").Shared.Modules.Utilities.NetworkUtility.Events.UpdateRebirths:FireServer(unpack(args))
+    wait()   
+else if Rebirths == "250b Rebirths" then
+    local args = {
+        [1] = "BuyRebirths",
+        [2] = 23
+    }
+    
+    game:GetService("ReplicatedStorage").Shared.Modules.Utilities.NetworkUtility.Events.UpdateRebirths:FireServer(unpack(args))
+    wait() 
+else if Rebirths == "500b Rebirths" then
+    local args = {
+        [1] = "BuyRebirths",
+        [2] = 24
+    }
+    
+    game:GetService("ReplicatedStorage").Shared.Modules.Utilities.NetworkUtility.Events.UpdateRebirths:FireServer(unpack(args))
+    wait()    
+else if Rebirths == "1t Rebirths" then
+    local args = {
+        [1] = "BuyRebirths",
+        [2] = 25
+    }
+    
+    game:GetService("ReplicatedStorage").Shared.Modules.Utilities.NetworkUtility.Events.UpdateRebirths:FireServer(unpack(args))
+    wait()    
+else if Rebirths == "2.5t Rebirths" then
+    local args = {
+        [1] = "BuyRebirths",
+        [2] = 26
+    }
+    
+    game:GetService("ReplicatedStorage").Shared.Modules.Utilities.NetworkUtility.Events.UpdateRebirths:FireServer(unpack(args))
+    wait()    
+else if Rebirths == "5t Rebirths" then
+    local args = {
+        [1] = "BuyRebirths",
+        [2] = 27
+    }
+    
+    game:GetService("ReplicatedStorage").Shared.Modules.Utilities.NetworkUtility.Events.UpdateRebirths:FireServer(unpack(args))
+    wait()  
+else if Rebirths == "10t Rebirths" then
+    local args = {
+        [1] = "BuyRebirths",
+        [2] = 28
+    }
+    
+    game:GetService("ReplicatedStorage").Shared.Modules.Utilities.NetworkUtility.Events.UpdateRebirths:FireServer(unpack(args))
+    wait()    
+else if Rebirths == "25t Rebirths" then
+    local args = {
+        [1] = "BuyRebirths",
+        [2] = 29
+    }
+    
+    game:GetService("ReplicatedStorage").Shared.Modules.Utilities.NetworkUtility.Events.UpdateRebirths:FireServer(unpack(args))
+    wait()   
+else if Rebirths == "50t Rebirths" then
+    local args = {
+        [1] = "BuyRebirths",
+        [2] = 30
+    }
+    
+    game:GetService("ReplicatedStorage").Shared.Modules.Utilities.NetworkUtility.Events.UpdateRebirths:FireServer(unpack(args))
+    wait() 
+else if Rebirths == "100t Rebirths" then
+    local args = {
+        [1] = "BuyRebirths",
+        [2] = 31
+    }
+    
+    game:GetService("ReplicatedStorage").Shared.Modules.Utilities.NetworkUtility.Events.UpdateRebirths:FireServer(unpack(args))
+    wait()    
+else if Rebirths == "250t Rebirths" then
+    local args = {
+        [1] = "BuyRebirths",
+        [2] = 32
+    }
+    
+    game:GetService("ReplicatedStorage").Shared.Modules.Utilities.NetworkUtility.Events.UpdateRebirths:FireServer(unpack(args))
+wait()   
+else if Rebirths == "500t Rebirths" then
+    local args = {
+        [1] = "BuyRebirths",
+        [2] = 33
+    }
+    
+    game:GetService("ReplicatedStorage").Shared.Modules.Utilities.NetworkUtility.Events.UpdateRebirths:FireServer(unpack(args))
+    wait()    
+else if Rebirths == "750t Rebirths" then
+    local args = {
+        [1] = "BuyRebirths",
+        [2] = 34
+    }
+    
+    game:GetService("ReplicatedStorage").Shared.Modules.Utilities.NetworkUtility.Events.UpdateRebirths:FireServer(unpack(args))
+    wait()    
+else if Rebirths == "1qd Rebirths" then
+    local args = {
+        [1] = "BuyRebirths",
+        [2] = 35
+    }
+    
+    game:GetService("ReplicatedStorage").Shared.Modules.Utilities.NetworkUtility.Events.UpdateRebirths:FireServer(unpack(args))
+    wait()    
+else if Rebirths == "2qd Rebirths" then
+    local args = {
+        [1] = "BuyRebirths",
+        [2] = 36
+    }
+    
+    game:GetService("ReplicatedStorage").Shared.Modules.Utilities.NetworkUtility.Events.UpdateRebirths:FireServer(unpack(args))
+    wait()     
+else if Rebirths == "5qd Rebirths" then
+    local args = {
+        [1] = "BuyRebirths",
+        [2] = 37
+    }
+    
+    game:GetService("ReplicatedStorage").Shared.Modules.Utilities.NetworkUtility.Events.UpdateRebirths:FireServer(unpack(args))
+    wait()    
+else if Rebirths == "7.5qd Rebirths" then
+    local args = {
+        [1] = "BuyRebirths",
+        [2] = 38
+    }
+    
+    game:GetService("ReplicatedStorage").Shared.Modules.Utilities.NetworkUtility.Events.UpdateRebirths:FireServer(unpack(args))
+wait()    
+else if Rebirths == "10qd Rebirths" then
+    local args = {
+        [1] = "BuyRebirths",
+        [2] = 39
+    }
+    
+    game:GetService("ReplicatedStorage").Shared.Modules.Utilities.NetworkUtility.Events.UpdateRebirths:FireServer(unpack(args))
+wait()    
+else if Rebirths == "25qd Rebirths" then
+    local args = {
+        [1] = "BuyRebirths",
+        [2] = 40
+    }
+    
+    game:GetService("ReplicatedStorage").Shared.Modules.Utilities.NetworkUtility.Events.UpdateRebirths:FireServer(unpack(args))
+wait()    
+else if Rebirths == "50qd Rebirths" then
+    local args = {
+        [1] = "BuyRebirths",
+        [2] = 41
+    }
+    
+    game:GetService("ReplicatedStorage").Shared.Modules.Utilities.NetworkUtility.Events.UpdateRebirths:FireServer(unpack(args))
+wait()    
+end
+end
+end
+end
+end
+end
+end
+end
+end
+end
+end
+end
+end
+end
+end
+end
+end
+end
+end
+end
+end
+end
+end
+end
+end
+end
+end
+end
+end
+end
+end
+end
+end
+end
+end
+end
+end
+end
+end
+end
+end
+end
+end)
+
+
+local Eggs = Window:NewTab("Eggs")
+local EggsSection = Eggs:NewSection("Eggs")
+
+local Egg; 
+    EggsSection:NewDropdown("Select Egg", "Selects Egg", {"Starter Egg", "Ice Berg Egg", "Snow Egg", "Toy Egg", "Brick Egg", "Atlantis Egg", "Trident Egg", "Eruption Egg","Obsidian Egg", "Asteroid Egg", "Galaxy Egg", "Cyborg Egg","Tech Egg", "Ninja Egg", "Master Egg", "2M Egg",}, function(value)
+        Egg = value; 
+    end)
+
+
+    EggsSection:NewToggle("Auto Open", "Auto Opens Eggs", function(v)
+
+        getgenv().autoclickerss = v
+        while true do
+            if not getgenv().autoclickerss then return end
+wait(1)
+
+
+if Egg == "Starter Egg" then
+    local args = {
+        [1] = "PurchaseEgg",
+        [2] = "Starter",
+        [3] = true
+    }
+    
+    game:GetService("ReplicatedStorage").Shared.Modules.Utilities.NetworkUtility.Events.UpdatePets:FireServer(unpack(args))
+    wait()
+else if Egg == "Ice Berg Egg" then
+    local args = {
+        [1] = "PurchaseEgg",
+        [2] = "Iceberg",
+        [3] = true
+    }
+    
+    game:GetService("ReplicatedStorage").Shared.Modules.Utilities.NetworkUtility.Events.UpdatePets:FireServer(unpack(args))
+wait()    
+else if Egg == "Snow Egg" then
+    local args = {
+        [1] = "PurchaseEgg",
+        [2] = "Snow",
+        [3] = true
+    }
+    
+    game:GetService("ReplicatedStorage").Shared.Modules.Utilities.NetworkUtility.Events.UpdatePets:FireServer(unpack(args))
+wait()    
+else if Egg == "Toy Egg" then
+    local args = {
+        [1] = "PurchaseEgg",
+        [2] = "Toy",
+        [3] = true
+    }
+    
+    game:GetService("ReplicatedStorage").Shared.Modules.Utilities.NetworkUtility.Events.UpdatePets:FireServer(unpack(args))
+wait() 
+else if Egg == "Brick Egg" then
+    local args = {
+        [1] = "PurchaseEgg",
+        [2] = "Brick",
+        [3] = true
+    }
+    
+    game:GetService("ReplicatedStorage").Shared.Modules.Utilities.NetworkUtility.Events.UpdatePets:FireServer(unpack(args))
+wait() 
+else if Egg == "Atlantis Egg" then
+    local args = {
+        [1] = "PurchaseEgg",
+        [2] = "Atlantis",
+        [3] = true
+    }
+    
+    game:GetService("ReplicatedStorage").Shared.Modules.Utilities.NetworkUtility.Events.UpdatePets:FireServer(unpack(args))
+wait() 
+else if Egg == "Trident Egg" then
+    local args = {
+        [1] = "PurchaseEgg",
+        [2] = "Trident",
+        [3] = true
+    }
+    
+    game:GetService("ReplicatedStorage").Shared.Modules.Utilities.NetworkUtility.Events.UpdatePets:FireServer(unpack(args))
+wait() 
+
+else if Egg == "Eruption Egg" then
+    local args = {
+        [1] = "PurchaseEgg",
+        [2] = "Eruption",
+        [3] = true
+    }
+    
+    game:GetService("ReplicatedStorage").Shared.Modules.Utilities.NetworkUtility.Events.UpdatePets:FireServer(unpack(args))
+wait() 
+else if Egg == "Obsidian Egg" then
+    local args = {
+        [1] = "PurchaseEgg",
+        [2] = "Obsidian",
+        [3] = true
+    }
+    
+    game:GetService("ReplicatedStorage").Shared.Modules.Utilities.NetworkUtility.Events.UpdatePets:FireServer(unpack(args))
+wait() 
+else if Egg == "Asteroid Egg" then
+    local args = {
+        [1] = "PurchaseEgg",
+        [2] = "Asteroid",
+        [3] = true
+    }
+    
+    game:GetService("ReplicatedStorage").Shared.Modules.Utilities.NetworkUtility.Events.UpdatePets:FireServer(unpack(args))
+wait() 
+else if Egg == "Galaxy Egg" then
+    local args = {
+        [1] = "PurchaseEgg",
+        [2] = "Galaxy",
+        [3] = true
+    }
+    
+    game:GetService("ReplicatedStorage").Shared.Modules.Utilities.NetworkUtility.Events.UpdatePets:FireServer(unpack(args))
+wait() 
+
+else if Egg == "Cyborg Egg" then
+    local args = {
+        [1] = "PurchaseEgg",
+        [2] = "Cyborg",
+        [3] = true
+    }
+    
+    game:GetService("ReplicatedStorage").Shared.Modules.Utilities.NetworkUtility.Events.UpdatePets:FireServer(unpack(args))
+wait() 
+else if Egg == "Tech Egg" then
+    local args = {
+        [1] = "PurchaseEgg", 
+        [2] = "Tech",
+        [3] = true
+    }
+    
+    game:GetService("ReplicatedStorage").Shared.Modules.Utilities.NetworkUtility.Events.UpdatePets:FireServer(unpack(args))
+wait() 
+else if Egg == "Ninja Egg" then
+    local args = {
+        [1] = "PurchaseEgg",
+        [2] = "Ninja",
+        [3] = true
+    }
+    
+    game:GetService("ReplicatedStorage").Shared.Modules.Utilities.NetworkUtility.Events.UpdatePets:FireServer(unpack(args))
+wait() 
+else if Egg == "Master Egg" then
+    local args = {
+        [1] = "PurchaseEgg",
+        [2] = "Master",
+        [3] = true
+    }
+    
+    game:GetService("ReplicatedStorage").Shared.Modules.Utilities.NetworkUtility.Events.UpdatePets:FireServer(unpack(args))
+wait() 
+
+else if Egg == "2M Egg" then
+    local args = {
+        [1] = "PurchaseEgg",
+        [2] = "2M",
+        [3] = true
+    }
+    
+    game:GetService("ReplicatedStorage").Shared.Modules.Utilities.NetworkUtility.Events.UpdatePets:FireServer(unpack(args))
+    
+wait() 
+end
+end
+end
+end
+end
+end
+end
+end
+end
+end
+end
+end
+end
+end
+end
+end
+end
+end)
+end
