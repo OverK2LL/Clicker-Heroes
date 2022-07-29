@@ -12,14 +12,78 @@ if game.PlaceId == 9711302332 then
         while true do
             if not getgenv().autoswing then return end
 
-            local A_1 = "Tap Capacity"
-            local A_2 = "HandleTapActivation"
-            local A_3 = "Home"
-            local Event = game:GetService("ReplicatedStorage").Shared.Modules.Utilities.NetworkUtility.Events.UpdateGemUpgrades
-            Event:FireServer(A_1, A_2, A_3)
+            local args = {
+                [1] = "Tap Capacity",
+                [2] = "HandleTapActivation",
+                [3] = "Desert"
+            }
             
-         
-
+            game:GetService("ReplicatedStorage").Shared.Modules.Utilities.NetworkUtility.Events.UpdateGemUpgrades:FireServer(unpack(args))
+            
+            
+            local args = {
+                [1] = "Tap Capacity",
+                [2] = "HandleTapActivation",
+                [3] = "Ninja"
+            }
+            
+            game:GetService("ReplicatedStorage").Shared.Modules.Utilities.NetworkUtility.Events.UpdateGemUpgrades:FireServer(unpack(args))
+            
+            
+            local args = {
+                [1] = "Tap Capacity",
+                [2] = "HandleTapActivation",
+                [3] = "Tech"
+            }
+            
+            game:GetService("ReplicatedStorage").Shared.Modules.Utilities.NetworkUtility.Events.UpdateGemUpgrades:FireServer(unpack(args))
+            
+            
+            local args = {
+                [1] = "Tap Capacity",
+                [2] = "HandleTapActivation",
+                [3] = "Space"
+            }
+            
+            game:GetService("ReplicatedStorage").Shared.Modules.Utilities.NetworkUtility.Events.UpdateGemUpgrades:FireServer(unpack(args))
+            
+            
+            local args = {
+                [1] = "Tap Capacity",
+                [2] = "HandleTapActivation",
+                [3] = "Magma"
+            }
+            
+            game:GetService("ReplicatedStorage").Shared.Modules.Utilities.NetworkUtility.Events.UpdateGemUpgrades:FireServer(unpack(args))
+            
+            
+            local args = {
+                [1] = "Tap Capacity",
+                [2] = "HandleTapActivation",
+                [3] = "Atlantis"
+            }
+            
+            game:GetService("ReplicatedStorage").Shared.Modules.Utilities.NetworkUtility.Events.UpdateGemUpgrades:FireServer(unpack(args))
+            
+            
+            local args = {
+                [1] = "Tap Capacity",
+                [2] = "HandleTapActivation",
+                [3] = "Toy"
+            }
+            
+            game:GetService("ReplicatedStorage").Shared.Modules.Utilities.NetworkUtility.Events.UpdateGemUpgrades:FireServer(unpack(args))
+            
+            
+            local args = {
+                [1] = "Tap Capacity",
+                [2] = "HandleTapActivation",
+                [3] = "Winter"
+            }
+            
+            game:GetService("ReplicatedStorage").Shared.Modules.Utilities.NetworkUtility.Events.UpdateGemUpgrades:FireServer(unpack(args))
+            
+            
            wait()
 
         end
@@ -452,7 +516,7 @@ local Eggs = Window:NewTab("Eggs")
 local EggsSection = Eggs:NewSection("Eggs")
 
 local Egg; 
-    EggsSection:NewDropdown("Select Egg", "Selects Egg", {"Starter Egg", "Ice Berg Egg", "Snow Egg", "Toy Egg", "Brick Egg", "Atlantis Egg", "Trident Egg", "Eruption Egg","Obsidian Egg", "Asteroid Egg", "Galaxy Egg", "Cyborg Egg","Tech Egg", "Ninja Egg", "Master Egg", "2M Egg",}, function(value)
+    EggsSection:NewDropdown("Select Egg", "Selects Egg", {"Starter Egg", "Ice Berg Egg", "Snow Egg", "Toy Egg", "Brick Egg", "Atlantis Egg", "Trident Egg", "Eruption Egg","Obsidian Egg", "Asteroid Egg", "Galaxy Egg", "Cyborg Egg","Tech Egg", "Ninja Egg", "Master Egg", "Desert Egg", "Sandy Egg",}, function(value)
         Egg = value; 
     end)
 
@@ -603,16 +667,27 @@ else if Egg == "Master Egg" then
     game:GetService("ReplicatedStorage").Shared.Modules.Utilities.NetworkUtility.Events.UpdatePets:FireServer(unpack(args))
 wait() 
 
-else if Egg == "2M Egg" then
+else if Egg == "Desert Egg" then
     local args = {
         [1] = "PurchaseEgg",
-        [2] = "2M",
+        [2] = "Desert",
         [3] = true
     }
     
     game:GetService("ReplicatedStorage").Shared.Modules.Utilities.NetworkUtility.Events.UpdatePets:FireServer(unpack(args))
     
 wait() 
+else if Egg == "Sandy Egg" then
+    local args = {
+        [1] = "PurchaseEgg",
+        [2] = "Sandy",
+        [3] = true
+    }
+    
+    game:GetService("ReplicatedStorage").Shared.Modules.Utilities.NetworkUtility.Events.UpdatePets:FireServer(unpack(args))
+    
+wait() 
+end
 end
 end
 end
