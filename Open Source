@@ -119,6 +119,7 @@ if game.PlaceId == 9711302332 then
             game:GetService("ReplicatedStorage").Shared.Modules.Utilities.NetworkUtility.Events.UpdatePets:FireServer(unpack(args))
             
             
+            
            wait(0.7)
 
         end
